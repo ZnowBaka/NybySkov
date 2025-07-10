@@ -1,0 +1,52 @@
+
+:root {
+  --primary-colour: #e9cfc2;
+  --accent-colour: #523e26;
+  --text-colour: #efd5c8;
+  --hover-accent: #735939;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.tab-nav {
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto 1rem;
+    gap: 1rem;
+}
+
+.tab-nav label {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--hover-accent);
+    color: var(--accent-colour);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tab-nav label:hover {
+    background-color: var(--hover-accent);
+    color: var(--accent-colour;
+}
+
+/* Highlight active tab */
+#tab-meadows:checked ~ .tab-nav label[for="tab-meadows"],
+#tab-skyline:checked ~ .tab-nav label[for="tab-skyline"],
+#tab-artistic:checked ~ .tab-nav label[for="tab-artistic"] {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+/* Tab Content Display */
+.tab-content {
+    display: none;
+}
+
+#tab-meadows:checked ~ .content #meadows,
+#tab-skuline:checked ~ .content #skyline,
+#tab-artistic:checked ~ .content #artistic {
+    display: block;
+}
